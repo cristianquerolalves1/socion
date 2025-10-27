@@ -1,149 +1,145 @@
-# 🧬 SOCION — Simulador Social Inteligente
 
-SOCION es una **plataforma avanzada de simulación social impulsada por inteligencia artificial**. Permite explorar cómo los cambios en variables sociales, económicas y ambientales pueden afectar la evolución de una sociedad a lo largo del tiempo.
+# SOCION — Simulador Social Inteligente
 
----
-
-## 🎯 Objetivo del Proyecto
-
-* Construir una herramienta profesional que combine **modelos de datos reales**, **IA generativa** y **visualización interactiva**.
-* Permitir que investigadores, estudiantes y profesionales experimenten con escenarios hipotéticos de forma segura y comprensible.
-* Fomentar el análisis crítico y la comprensión de la complejidad social.
-
-> [!IMPORTANT]
-> SOCION no es solo un simulador; es una herramienta de análisis profesional para el estudio y la predicción de dinámicas sociales.
+SOCION es una **plataforma avanzada de simulación social impulsada por inteligencia artificial**, diseñada para analizar, visualizar y proyectar la evolución de sociedades bajo diferentes escenarios económicos, sociales y ambientales. El proyecto está concebido para ser un entorno profesional, escalable y reproducible, adecuado para investigación, educación y análisis estratégico.
 
 ---
 
-## 💡 Funcionalidades Clave
+## Objetivo del Proyecto
 
-1. **Simulación de escenarios sociales**
-
-   * Configuración de variables: población, PIB, tasa de desempleo, inversión pública, emisiones de CO₂, entre otras.
-   * Proyección a medio y largo plazo (10 años).
-
-2. **Análisis narrativo con IA**
-
-   * Informe generado automáticamente que interpreta los resultados.
-   * Lenguaje claro y profesional, útil para informes o presentaciones.
-
-3. **Visualización avanzada**
-
-   * Dashboards interactivos con gráficos, comparaciones y mapas.
-   * Permite observar la evolución de múltiples variables simultáneamente.
-
-4. **Gestión de escenarios**
-
-   * Guardado, comparación y compartición de escenarios simulados.
-   * Evolución de simulaciones históricas y tendencias.
+* Construir una herramienta profesional que permita **experimentación rigurosa** con variables sociales, económicas y medioambientales.
+* Facilitar el análisis de escenarios hipotéticos mediante simulaciones precisas y **análisis narrativos generados por IA**.
+* Proporcionar una base sólida para investigadores, consultores, educadores y profesionales que necesiten estudiar la dinámica social de manera controlada y documentada.
 
 ---
 
-## 🧱 Arquitectura Técnica
+## Alcance
 
-* **Frontend:** React + Tailwind CSS + Plotly.js
-* **Backend:** Python + FastAPI
-* **Base de datos:** PostgreSQL / SQLite (para MVP)
-* **IA generativa:** OpenAI API (GPT) para generación de narrativas
-* **Despliegue:** Docker + Render / Vercel
+SOCION busca ofrecer un entorno integral que permita:
 
-> **Flujo de datos:**
->
-> ```
-> Usuario → Frontend → API FastAPI → Simulación → IA → Dashboard
-> ```
+1. Definir escenarios sociales con variables personalizables.
+2. Ejecutar simulaciones proyectando resultados a mediano y largo plazo (10 años o más).
+3. Analizar resultados mediante dashboards interactivos y reportes generados automáticamente.
+4. Comparar múltiples escenarios y mantener un histórico de simulaciones.
+5. Garantizar trazabilidad y reproducibilidad de los experimentos realizados.
 
 ---
 
-## 🛠️ Instalación y Configuración (MVP)
+## Estructura del Proyecto
 
-### Clonar repositorio
-
-```bash
-git clone https://github.com/tuusuario/socion.git
-cd socion
+```
+socion/
+├── backend/                # Lógica del backend y API
+├── frontend/               # Interfaz de usuario y visualización
+├── data/                   # Datasets iniciales y de referencia
+├── README.md               # Documentación principal del proyecto
+├── LICENSE                 # Licencia de uso
+└── .gitignore              # Archivos a ignorar por Git
 ```
 
-### Backend
-
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
-
-### Frontend
-
-```bash
-cd ../frontend
-npm install
-npm start
-```
-
-> [!NOTE]
-> El frontend se conectará al backend en `http://127.0.0.1:8000`.
+Cada módulo está documentado de manera independiente mediante su propio README, garantizando claridad y profesionalidad.
 
 ---
 
-## 📈 Roadmap del Proyecto
+## Tecnologías y Herramientas
 
-| Fase   | Objetivo                                        | Tiempo Estimado |
-| ------ | ----------------------------------------------- | --------------- |
-| Fase 1 | Prototipo backend + frontend básico             | 1–2 semanas     |
-| Fase 2 | Dashboards y gráficos interactivos              | 2–3 semanas     |
-| Fase 3 | Integración de IA narrativa                     | 2 semanas       |
-| Fase 4 | Persistencia de escenarios y comparaciones      | 2 semanas       |
-| Fase 5 | Publicación de demo y documentación profesional | 1–2 semanas     |
-
----
-
-## 🔬 Casos de Uso
+* **Backend:** Python 3.11+, FastAPI, Pandas, Scikit-learn, OpenAI API
+* **Frontend:** React 18+, Tailwind CSS, Plotly.js, Axios
+* **Base de Datos:** PostgreSQL (o SQLite para MVP)
+* **Control de Versiones:** Git + GitHub
+* **Testing:** pytest (backend), Jest / React Testing Library (frontend)
+* **Despliegue:** Render (backend) y Vercel (frontend), contenedores Docker opcionales
 
 > [!IMPORTANT]
-> SOCION está diseñado para profesionales, investigadores y educadores que buscan un entendimiento profundo de la dinámica social.
-
-1. **Académico:** enseñar impacto de políticas en sociedades simuladas.
-2. **Profesional / Consultoría:** analizar escenarios urbanos o económicos.
-3. **Investigación:** probar hipótesis sociales y observar tendencias.
+> La elección de estas tecnologías permite escalabilidad, mantenibilidad y reproducibilidad profesional, así como una experiencia de usuario sólida y consistente.
 
 ---
 
-## 🌐 Futuras Expansiones
+## Funcionalidades Clave
 
-* Incorporar **modelos de simulación multiagente** para escenarios más realistas.
-* Integración con **datasets internacionales** (ONU, Banco Mundial).
-* API pública para investigadores.
-* Visualizaciones 3D interactivas.
+1. **Simulación de Escenarios Sociales**
+
+   * Configuración de variables como población, PIB, inversión, desempleo y emisiones.
+   * Proyección de resultados a mediano y largo plazo.
+
+2. **Análisis Narrativo Automático**
+
+   * Generación de informes claros y detallados mediante IA.
+   * Facilita interpretación y presentación de resultados a terceros.
+
+3. **Visualización Avanzada**
+
+   * Dashboards interactivos con gráficos comparativos y mapas.
+   * Capacidad de superposición de múltiples escenarios para análisis comparativo.
+
+4. **Gestión y Persistencia de Escenarios**
+
+   * Guardado, recuperación y comparación de simulaciones.
+   * Mantiene historial completo para reproducibilidad.
+
+5. **Extensibilidad y Modularidad**
+
+   * Estructura de proyecto modular que permite añadir nuevas variables, datasets y modelos de simulación sin reestructuración.
 
 ---
 
-## 📄 Contribución
+## Roadmap Profesional
 
-> [!NOTE]
-> SOCION es open source y está abierto a colaboradores.
-
-Si deseas contribuir:
-
-1. Haz un fork del repositorio.
-2. Crea una rama `feature/xxx`.
-3. Realiza cambios claros y documentados.
-4. Abre un Pull Request detallando tus mejoras.
-
----
-
-## ⚖️ Licencia
-
-Proyecto bajo **MIT License** — ver [LICENSE](LICENSE) para más detalles.
+| Fase   | Objetivo                                                 | Tiempo Estimado |
+| ------ | -------------------------------------------------------- | --------------- |
+| Fase 1 | Configuración de repositorio, estructura y documentación | 1 semana        |
+| Fase 2 | Desarrollo de backend y endpoint básico                  | 1–2 semanas     |
+| Fase 3 | Implementación de frontend inicial                       | 1–2 semanas     |
+| Fase 4 | Integración backend ↔ frontend                           | 1 semana        |
+| Fase 5 | Implementación de IA narrativa y dashboards              | 2 semanas       |
+| Fase 6 | Persistencia de escenarios y mejoras UX/UI               | 2 semanas       |
+| Fase 7 | Publicación de demo y documentación completa             | 1 semana        |
 
 ---
 
-## 🔗 Contacto
+## Casos de Uso Profesional
 
-Desarrollado por: **Cristian Querol**
-Email: [cristian.personal@mail.com](mailto:cristian.personal@mail.com)
-GitHub: [https://github.com/cristianquerolalves1](https://github.com/cristianquerolalves1)
+1. **Académico**: Enseñanza de dinámicas sociales y económicas mediante simulaciones controladas.
+2. **Consultoría y Estrategia**: Análisis de impacto de políticas públicas o decisiones estratégicas.
+3. **Investigación**: Experimentación con hipótesis sociales, económicas y medioambientales.
+4. **Educación Avanzada**: Creación de entornos interactivos para estudiantes y profesionales.
+
+---
+
+## Buenas Prácticas del Proyecto
+
+* Mantener commits atómicos y descriptivos en Git.
+* Documentar todos los cambios en cada módulo.
+* Garantizar trazabilidad y reproducibilidad de los datos y simulaciones.
+* Separación clara entre frontend, backend y datasets.
+* Testeo riguroso antes de cada despliegue.
+* Mantener un historial de versiones para todos los datasets y scripts.
+
+---
+
+## Contribución
+
+SOCION es un proyecto **open source** con enfoque profesional. Las contribuciones deben seguir las siguientes normas:
+
+1. Crear un fork del repositorio.
+2. Trabajar en una rama feature/xxx para cada nueva funcionalidad.
+3. Documentar claramente los cambios realizados.
+4. Abrir Pull Requests con descripciones formales y detalladas.
+5. Mantener consistencia con la estructura, documentación y normas de commits del proyecto.
+
+---
+
+## Licencia
+
+SOCION está bajo **MIT License**, permitiendo uso, modificación y distribución del código bajo condiciones profesionales y claras.
+
+---
+
+## Contacto
+
+* Desarrollador Principal: **Cristian Querol**
+* Email: [cristian.personal@mail.com](mailto:cristian.personal@mail.com)
+* GitHub: [https://github.com/tuusuario](https://github.com/cristianquerolalves1)
 
 > [!IMPORTANT]
-> Este README está diseñado para reflejar un proyecto serio, profesional y listo para ser presentado como portfolio, demostración académica o prototipo de startup.
+> Este README refleja un enfoque profesional y riguroso para SOCION, garantizando seriedad, claridad y escalabilidad desde el inicio del proyecto.
